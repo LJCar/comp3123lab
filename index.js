@@ -15,7 +15,7 @@ app.get('/user',
         ,res) =>{
         const firstname = req.query.firstname || 'Pritesh';
         const lastname = re.query.lastname || 'Patel';
-        res.json({firstname, lastname});
+        res.send.json({firstname, lastname});
     })
 
 //http://localhost:3000/
@@ -30,6 +30,7 @@ app.post('/user/:firstname/:lastname',
     (req
         ,res) =>{
         const { firstname, lastname } = req.params;
+        res.send.json({firstname, lastname});
     })
 
 //Listen to the server

@@ -10,10 +10,26 @@ app.get('/',
     })
 
 //http://localhost:3000/
-app.post('/',
+app.get('/user',
+    (req
+        ,res) =>{
+        const firstname = req.query.firstname || 'Pritesh';
+        const lastname = re.query.lastname || 'Patel';
+        res.json({firstname, lastname});
+    })
+
+//http://localhost:3000/
+app.get('/hello',
     (req
      ,res) =>{
-    res.send('Hello World!');
+    res.send('Hello Express JS');
+    })
+
+//http://localhost:3000/
+app.post('/user/:firstname/:lastname',
+    (req
+        ,res) =>{
+        const { firstname, lastname } = req.params;
     })
 
 //Listen to the server
